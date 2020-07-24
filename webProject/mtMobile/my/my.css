@@ -1,0 +1,84 @@
+.header{
+    width: 100%;
+    height: 8.907rem;
+    display: flex;
+    flex-direction: column;
+    background-image: url(img/header.png);
+    background-size: cover;
+    -ms-align-items: center;
+    align-items: center;
+}
+.header-photo{
+    width: 4.133rem;
+    height: 4.133rem;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    background-color: #fff;
+    color: #eee;
+    border-radius: 50%;
+    border: 0.133rem solid #f6d555;
+    margin: 1.2rem 0 0.747rem 0;
+}
+.header-photo .iconfont{
+    font-size: 3.467rem;
+}
+.nick-name{
+    font-size: 0.96rem;
+    color: #333;
+}
+.main{
+    min-height: 24rem;
+    width: 100%;
+    background-color: #eee;
+}
+.main-group{
+    border-bottom: 0.533rem solid #eee;
+}
+.main-item{
+    padding: 0 0.533rem;
+    height: 2.4rem;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    font-size: 0.907rem;
+    border-bottom: 1px solid #e4e4e4;
+    background-color: #fff;
+    position: relative;
+}
+.main-item .iconfont{
+    padding-right: 0.533rem;
+}
+.main-item .fr{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main-item .iconfont{
+    color: #d2d2d2;
+}
+.main-group:last-child{
+    border-bottom: none;
+}
+.server-tel{
+    height: 2.533rem;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    color: #f0af19;
+    font-weight: 700;
+    font-size: 0.8rem;
+    background-color: #fff;
+}
+.server-time{
+    height: 2.027rem;
+    color: #9a9a9a;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    font-size: 0.747rem;
+}

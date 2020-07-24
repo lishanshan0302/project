@@ -1,0 +1,110 @@
+*{
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+/*重置默认样式*/
+body, button, input, select, textarea {
+    font: 12px/1 微软雅黑, Tahoma, Helvetica, Arial, 宋体, sans-serif;
+    /*font: 14px/1 "Microsoft YaHei", Tahoma, Helvetica, Arial, SimSun, sans-serif;*/
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+em, i {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color:  transparent;
+    font-size: 12px;
+}
+a:active {
+    outline: 0;
+}
+img {
+    border: none;
+    width: 100%;
+    vertical-align: top;/*解决内联块对齐问题*/
+}
+button{
+    border: none;
+    outline: none;
+}
+textarea {
+    overflow: auto;
+    resize: none;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+input{
+    border: none;
+    outline: none;
+    background: none;
+}
+.clearfix::after {
+    content: ' ';
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+}
+.text-ellipsis{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+.multiline-ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;/*参数可改*/
+    -webkit-box-orient: vertical;
+    white-space: normal!important;
+    word-wrap: break-word;
+}
+.hide {
+    display: none;
+}

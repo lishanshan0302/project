@@ -1,0 +1,343 @@
+body{
+    font-family: "Microsoft YaHei UI";
+}
+/*头部区样式*/
+.header{
+    width: 100%;
+    height: 80px;
+    background-color: #07CBC9;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    z-index: 999;
+}
+    /*log区样式*/
+.header .log{
+    text-align: center;
+    width: 260px;
+    float: left;
+    margin-left: 150px;
+}
+.header .log img{
+    margin: 16px auto;
+    display: block;
+}
+.header .log a{
+    display: block;
+}
+    /*nav样式*/
+.header .nav{
+    float: right;
+    height: 80px;
+    line-height: 80px;
+    margin-right: 80px;
+}
+.header .nav ul{
+    height: 80px;
+}
+.header .nav li{
+    float: left;
+    margin-right: 20px;
+}
+.header .nav li a{
+    color: #fff;
+    font-weight: 700;
+}
+.header .nav li:hover {
+    background-color: #fff;
+}
+.header .nav li:hover a{
+    color: #07CBC9;
+}
+/*页面banner区*/
+.banner{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    margin-top: 80px;
+    overflow: hidden;
+}
+.banner .banner_img img{
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+.banner .banner_mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #000;
+    opacity: 0.5;
+}
+    /*banner区表单样式*/
+.banner .banner_form{
+    width: 510px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -255px;
+    z-index: 3;
+    text-align: center;
+}
+.banner .banner_form .form_com{
+    display: block;
+    width: 495px;
+    height: 39px;
+    border: 2px solid #808080;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    background-color: transparent;
+    color: #808080;
+    font-family: "微软雅黑";
+}
+.banner .banner_form .form_tarea{
+    height: 115px;
+    background-color: transparent;
+    font-family: "Microsoft YaHei UI";
+    line-height: 39px;
+}
+.banner .banner_form .form_sub{
+    width: 123px;
+    height: 39px;
+    border: 2px solid #808080;
+    color: #BDBDAC;
+    background-color: transparent;
+    font-family: "Microsoft YaHei UI";
+}
+.banner .banner_form .form_com:hover{
+    border: 2px solid #07cbc9;
+}
+.banner .banner_form .form_sub:hover{
+    background-color: #07cbc9;
+    border: 0;
+    cursor: pointer;
+}
+/*about样式*/
+.about{
+    width: 100%;
+    background-color: #fff;
+}
+/*about 上部样式*/
+.about .about_top{
+    text-align: center;
+    width: 550px;
+    height: 190px;
+    margin: 60px auto 0;
+}
+.about .about_top h1{
+    height: 70px;
+    font-size: 40px;
+}
+.about .about_top hr{
+    width: 40px;
+    height: 1px;
+    background-color: #07cbc9;
+    margin: 0 auto;
+}
+.about .about_top p{
+    margin-top: 20px;
+    line-height: 25px;
+    color: #797979;
+}
+/*about 中部样式*/
+.about_middle{
+    width: 1093px;
+    height: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+/*about中部左侧样式*/
+.about_middle .about_middle-lf{
+    width: 200px;
+    float: left;
+    position: relative;
+}
+.about_middle .about_middle-lf h2{
+    height: 45px;
+    line-height: 45px;
+    font-size: 30px;
+    font-weight: 400;
+}
+.about_middle .about_middle-lf .about_middle-lf-exp,.about_middle-lf-exp-mask{
+    width: 308px;
+    height: 194px;
+    line-height: 25px;
+    padding: 25px 30px;
+    text-align: left;
+    border: 1px solid #C5C5C5;
+    position: absolute;
+    left: 0;
+    top: 95px;
+}
+.about_middle .about_middle-lf .about_middle-lf-exp{
+    z-index: 2;
+}
+.about_middle .about_middle-lf .about_middle-lf-btn {
+    display: block;
+    width: 103px;
+    height: 43px;
+    position: absolute;
+    background-color: #000;
+    left: 30px;
+    top:260px;
+    color: #fff;
+    line-height: 45px;
+    z-index: 2;
+    border: 1px solid #000;
+}
+.about_middle .about_middle-lf .about_middle-lf-exp-mask{
+    background: #fff;
+    opacity: 0.5;
+}
+.about_middle .about_middle-lf .about_middle-lf-btn:hover{
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #000;
+    color: #000;
+}
+/*about中部中间样式*/
+.about_middle .about_middle-middle{
+    width: 568px;
+    height: 380px;
+    float: left;
+    margin-left: 50px;
+}
+.about_middle .about_middle-middle img{
+    width: 568px;
+    height: 380px;
+    display: block;
+}
+/*about中部右侧样式*/
+.about_middle .about_middle-rt{
+    float: left;
+    margin-left: 35px;
+}
+.about_middle .about_middle-rt hr{
+    width: 40px;
+    height: 1px;
+    background-color: #07CBC9;
+    margin: 15px auto;
+}
+.about_middle .about_middle-rt .about_middle-rt-bottom,.about_middle-rt-top{
+    width: 96px;
+    height: 92px;
+    border: 1px solid #07CBC9;
+    padding: 25px 70px;
+}
+.about_middle .about_middle-rt .about_middle-rt-bottom{
+    margin-top: 30px;
+}
+/*about底部样式*/
+.about_bottom{
+    width: 100%;
+    height: 600px;
+}
+.about_bottom div{
+    width: 25%;
+    height: 50%;
+    float: left;
+    color: #fff;
+    background-color: #07CBC9;
+    font-weight: 400;
+}
+.about_bottom div img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.about_bottom div h1{
+    margin-top: 25px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 26px;
+}
+.about_bottom div p{
+    line-height: 25px;
+    font-size: 16px;
+    margin:10px;
+}
+.about_bottom div span{
+    display: block;
+    line-height: 20px;
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #DDD9D4;
+}
+.about_bottom .about_bottom_com{
+    position: relative;
+}
+.about_bottom .about_bottom_com .about_bottom_com-btn {
+    line-height: 40px;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    background-color: #000;
+    color: #fff;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    margin-left: -50px;
+}
+.about_bottom .about_bottom_com .about_bottom_com-btn:hover{
+    background-color: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+/*页面GALLERY区*/
+.gallery{
+    width: 1170px;
+    margin: 0 auto;
+    padding-left: 30px;
+    padding-bottom: 60px;
+}
+.gallery .gallery_top{
+    text-align: center;
+    width: 550px;
+    height: 190px;
+    margin: 60px auto 0;
+}
+.gallery .gallery_top h1{
+    height: 70px;
+    font-size: 40px;
+}
+.gallery .gallery_top hr{
+    width: 40px;
+    height: 1px;
+    background-color: #07cbc9;
+    margin: 0 auto;
+}
+.gallery .gallery_top p{
+    margin-top: 20px;
+    line-height: 25px;
+    color: #797979;
+}
+.gallery_bottom .gallery_bottom_com{
+    width: 360px;
+    margin: 30px 30px 0 0;
+    float: left;
+}
+.gallery_bottom .gallery_bottom_com img{
+    display: block;
+    width: 360px;
+    height: 240px;
+}
+.gallery_bottom .gallery_bottom_com p{
+    height: 64px;
+    line-height: 64px;
+    padding-left: 20px;
+    background-color: #000;
+    color: #fff;
+}
+/*页面底部*/
+.footer p{
+    height: 79px;
+    width: 100%;
+    line-height: 79px;
+    background-color: #07CBC9;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+}

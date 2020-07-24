@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+    <script src="plug/jQ/jQuery3.5.1.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--问题：
+         预约挂号部分开放预约科室部分--左右两侧设置浮动之后，不设置高度动态填充具体科室数据的话，如何通过css设置高度相等？-->
+<!--头部-->
+    <header class="header">
+        <div class="wrap clearfix">
+            <div class="header_phone">010-114/116114电话预约</div>
+            <div class="header_welcome">欢迎来到城市预约挂号统一平台&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请
+                <a href="javascript:void(0);" class="header_welcome-register">登录</a>
+                <a href="javascript:void(0);" class="header_welcome-login">注册</a>
+                <a href="javascript:void(0);" class="header_welcome-help">帮助中心</a>
+            </div>
+        </div>
+    </header>
+<!--搜索区域search-->
+    <div class="search">
+        <div class="wrap clearfix">
+            <div class="search_log"></div>
+            <div class="search_input ui-search">
+                <div class="search_input-selected">医院</div>
+                <div class="search_input-list">
+                    <a href="#">科室</a>
+                    <a href="#">疾病</a>
+                    <a href="#">医院</a>
+                </div>
+                <input type="text" placeholder="请输入搜索内容" class="search__input-text">
+                <a href="javascript:void (0);" class="submit"></a>
+            </div>
+        </div>
+    </div>
+<!--nav模块-->
+    <nav class="nav ">
+        <div class="wrap clearfix">
+            <a href="javascript:void(0);" class="nav-item">首页</a>
+            <a href="javascript:void(0);" class="nav-item">按医院挂号</a>
+            <a href="javascript:void(0);" class="nav-item">按科室挂号</a>
+            <a href="javascript:void(0);" class="nav-item">按疾病挂号</a>
+            <a href="javascript:void(0);" class="nav-item">最新公告</a>
+            <a href="javascript:void(0);" class="nav-item right">社会知名医院</a>
+        </div>
+    </nav>
+<!--hospital-address医院地址模块-->
+    <div class="hospital__address wrap clearfix">
+        <div class="hospital__address-caption">
+            <div class="hospital__address-caption-lf"> 北京协和医院 <a href="javascript:void (0);">关注医院</a></div>
+            <div class="hospital__address-caption-rt"><span>等级：</span>三级甲等 <span>区域：</span>东城区 <span>分类：</span>中国医科院所属医院</div>
+        </div>
+        <div class="hospital__address-detail">
+            <div class="hospital__address-detail-imgL"></div>
+            <div class="hospital__address-detail-desc">
+                <p>[东院]北京市东城区帅府园一号[西院]北京市西城区大木仓胡同41号</p>
+                <p>http：//www.punch.cn/</p>
+                <p>东院咨询台：010-69155564：西院咨询台：010-69158010</p>
+                <p>东院：106，108，110，111，116，684，685到东单路口北；41，104快：814到东单路口南：1，52，728，802到东单路口西；20，25，37：39，到东单路口东：103，104，420；803到新东安市场：地铁1、5号线到东单。西院：68到辟才胡同东口；更多乘车路线详见须知
+                </p>
+            </div>
+            <div class="hospital__address-detail-imgR"></div>
+        </div>
+    </div>
+<!--hospital__detail模块-->
+    <div class="hospital__detail wrap clearfix nav-ui">
+<!--        detail-nav-->
+        <div class="hospital__detail__nav ">
+            <a href="javascript:void (0);" class="hospital__detail__nav-item nav-item-focus">预约挂号</a>
+            <a href="javascript:void (0);" class="hospital__detail__nav-item">医院介绍</a>
+            <a href="javascript:void (0);" class="hospital__detail__nav-item">预约须知</a>
+            <a href="javascript:void (0);" class="hospital__detail__nav-item">停诊信息</a>
+            <a href="javascript:void (0);" class="hospital__detail__nav-item">查询取消</a>
+        </div>
+<!--        预约挂号-->
+        <div class="hospital__detail__group clearfix">
+            <div class="hospital__detail__group-department">
+                <div class="hospital__detail__group-caption"><div>开放预约科室</div></div>
+<!--                <div class="hospital__detail__group-item clearfix">-->
+<!--                    <div class="hospital__detail__group-item-detail">-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                        <a href="javascript:void (0);">特殊门诊</a>-->
+<!--                    </div>-->
+<!--                    <div class="hospital__detail__group-item-title"><div class="lf">2301</div></div>-->
+
+<!--                </div>-->
+            </div>
+            <div class="hospital__detail__group-rule">
+                <div class="hospital__detail__group-rule-caption">
+                    预约规则 <span>（更新时间每日8：30更新）</span>
+                </div>
+                <div class="hospital__detail__group-rule-detail">
+                    <div class="hospital__detail__group-rule-item clearfix"> <span class="rule-item-caption">预约周期：</span><span>7天</span> </div>
+                    <div class="hospital__detail__group-rule-item clearfix"> <span class="rule-item-caption">放号时间：</span><span>8:30</span></div>
+                    <div class="hospital__detail__group-rule-item clearfix"> <span class="rule-item-caption">停挂时间：</span><span>下午14：00停止次日预约挂号(周五14：00后停挂至下周一)</span></div>
+                    <div class="hospital__detail__group-rule-item clearfix"> <span class="rule-item-caption">退号时间：</span><span>就诊前一工作日14：00前取消</span></div>
+                    <div class="hospital__detail__group-rule-item clearfix">
+                        <span class="rule-item-caption ">特殊规则：</span>
+                        <span class="special">①取号地点不同：西院区预约号取号地点：西院区门诊楼一层号窗口取号。东院区预约号取号地点：东院区老门诊楼一层大厅挂号窗口或新门诊楼各楼层挂号/收费窗口取号。</span></div>
+                </div>
+            </div>
+        </div>
+<!--        医院介绍-->
+        <div class="hospital__detail__group clearfix hidden">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;北京协和医院是集医疗、教学、科研于一体的大型三级甲等综合医院，是国家卫生计生委指定的全国疑难重症诊宾医疗任务的医院之一，以学科齐全、技术力量雄厚、特色专科突出、多学科综合优势强大享誉海内外。在2010、2011、20
+                院管理研究所公布的“中国最佳医院排行榜”中连续五年名列榜首。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;医院建成于1921年，由洛克菲勒基金会创办。建院之初，就志在“建成亚洲最好的医学中心”。90余年来，医院
+                协和精神和兼容并蓄的特色文化风格，创立了“三基”、“三严”的现代医学教育理念，形成了以”教授、病例、图书馆“著称的协和“三宝”，培养造就了张孝骞、林巧稚等一代医学大师和多位中国现代医学的领军人物，并向全国输送了大批的医学管理人才，创建了当今
+                知名的10余家大型综合及专科医院。2011年在总结90年发展经验的基础上，创新性提出了“待病人如亲人，提高病人满意度；待同事如家人，提高员工幸福感“新办院理念。</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;目前，医院共有2个院区、总建筑面积53万平方米，在职职工4000余名、两院院士5人、临床和医技科室53个、国家级临床重点专科29个、博士点16个、硕士点29个、国家级继续医学教育基地6个、二级学科住院医师培养基地18个、三级学科专科医师培养基
+                张，单日最高门诊量约1.5万人次、年出院病人约8万余人次。被评为“全国文明单位”、“全国创先争优先进基层党组织”、“全国卫生系统现金集体”、“首都卫生系统文明单位”、 “最受欢迎三甲医院”，荣获全国五一劳动奖章。同时，医院还承担着支
+                医疗队的重任，在2008年北京奥运工作中荣获“特别贡献奖”。</p>
+	        <p>&nbsp;&nbsp;&nbsp;&nbsp;90多年来，协和人以执着的医志、高尚的医德、精湛的医术和严谨的学风书写了辉煌的历史，今天的协和人正为打造”国际知名、国内一流“医院的目标而继续努力。</p>
+        </div>
+<!--        预约须知-->
+        <div class="hospital__detail__group clearfix hidden">
+            <h4>北京协和医院预约挂号须知</h4>
+            <h6>电话预约挂号：010-114(24小时)</h6>
+            <h6>网络预约挂号：http：//www.bjguahao.gov.cn</h6>
+            <p>根据卫生部8月5日通知和卫生局8月20日工作部署，北京协和医院已完成电话、网络预约挂号的流程建设，现将预约挂号、取号有关事项公布如下，请您认真阅读预约须知：</p>
+            <h6>一、预约时间范围：</h6>
+            <p>1、您可预约7天内(试点)日间的副教授、主治医师和住院医师等号源。节假日不安排预约号(含周六、周日).</p>
+            <p>2、每天早8：30分开始放号：下午14：00停止次日预约挂号。</p>
+            <p>3、周五14：00停挂至下周一。</p>
+            <h6>二、预约实名制：</h6>
+            <p>统一平台电话预约和网上预约挂号均采取实名制注册预约，请您如实提供就诊人员的真实姓名、有效证件号(身份证、军官证、护照)、性别、电话、手机号码、病案号或协和就诊卡条形码
+                上的ID号等有效基本信息。</p>
+            <h6>三、预约取号：</h6>
+            <p>1、预约成功后，请患者于就诊当日携带有效证件、预约识别码及协和医院就诊卡到医院挂号窗口验证预约信息(核对与预约登记实名信息一致的本人有效证件和预约识别码)和取号，如验
+                证不符则医院不能提供相应的诊疗服务。如果没有协和医院就诊卡者，请先办好就诊卡后再取号。</p>
+            <p>2、取号时间：上午就诊患者，就诊当日早9：00以前取号。下午就诊患者，就诊当日下午12：00-13：30之间取号。过时未取号者，预约作废。</p>
+            <p>3、取号地点：西院区预约号取号地点：西院区门诊楼一层大厅挂号窗口取号。东院区预约号取号地点：东院区老门诊楼一层大厅挂号窗口或新门诊楼各楼层挂号/收费窗口取号。</p>
+            <h6>四、医生停诊：</h6>
+            <p>如遇特殊情况医生停诊，给您造成的不便敬请谅解。医生临时停诊，工作人员将会用电话方式及时通知您，请配合更改就诊日期或更换其他医生，请您保持电话畅通。</p>
+            <h6>五、取消预约： </h6>
+            <p>挂出的预约号如办理退号，至少在就诊前一工作日14：00前通过网站或者114电话凭预约识别码进行取消，</p>
+            <h6>六、爽约处理：</h6>
+            <p>1、如预约成功后患者未能按时就诊且不办理取消预约号视为爽约。</p>
+            <p>2、一年内(自然年)无故爽约累计达到3次的爽约用户将自动进入系统爽约名单，此后3个月内将取消其预约挂号资格：一年内(自然年)累计爽约6次，取消6个月的预约挂号资格。</p>
+            <h6>七、其它注意事项：</h6>
+            <p>1、协和东院、西院都可以预约。</p>
+            <p>2、国际医疗部门诊、卫干门诊不对外预约。</p>
+        </div>
+<!--        停诊信息-->
+        <div class="hospital__detail__group clearfix hidden stop__information">
+                <h3 class="stop__information-caption">停诊信息</h3>
+                <table class="stop__information-detail">
+                </table>
+            </div>
+<!--        查询取消-->
+        <div class="hospital__detail__group clearfix hidden ">
+            <div class="hospital__detail-search">
+                预约识别码:
+                <input type="text">
+                <button>查询订单</button>
+            </div>
+        </div>
+    </div>
+<!--footer模块-->
+    <footer class="footer">@CopyRight&nbsp;&nbsp;&nbsp;&copy;&nbsp;&nbsp;&nbsp;2017慕课网版权所有</footer>
+</body>
+<script src="js/index.js"> </script>
+</html>

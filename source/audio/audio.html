@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音频播放器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .outerNode {
+            width: 505px;
+            height: 406px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -252.5px;
+            margin-top: -203px;
+            box-shadow: 0 0 16px #a6a18d;
+            border-radius: 8px;
+            border: 1px solid #a6a18d;
+        }
+
+        .innerNode {
+            width: 503px;
+            height: 405px;
+            border-radius: 8px;
+            border-top: 1px solid #e1d2bd;
+            border-left: 1px solid #ceccbf;
+            border-right: 1px solid #ceccbf;
+            overflow: hidden;
+        }
+
+        .topNode {
+            width: 100%;
+            height: 198px;
+            border-bottom: 2px solid #787463;
+            background: url(music/pic/fmt01.jpg) no-repeat center center;
+            transition: .7s;
+            position: relative;
+        }
+
+        .lineNode {
+            width: 100%;
+            height: 46px;
+            border-top: 2px solid #f9f7ee;
+            border-bottom: 2px solid #a29d8a;
+            background: url(musicimage/linebg.jpg) repeat-x;
+        }
+
+        .progressNode {
+            width: 440px;
+            height: 18px;
+            float: left;
+            margin: 13px 0 0 28px;
+            background: url(musicimage/progressbg.jpg) repeat-x;
+            position: relative;
+        }
+
+        .progress-left {
+            position: absolute;
+            left: 0;
+            width: 7px;
+            height: 100%;
+            background: url(musicimage/leftNode.jpg);
+        }
+
+        .progress-right {
+            position: absolute;
+            right: 0;
+            width: 7px;
+            height: 100%;
+            background: url(musicimage/rightNode.jpg);
+        }
+
+        .bottomNode {
+            width: 100%;
+            height: 157px;
+            border-top: 1px solid #a29d8a;
+            background: url(musicimage/bottomBg.jpg) repeat-x;
+            position: relative;
+        }
+
+        .lastNode {
+            width: 75px;
+            height: 74px;
+            position: absolute;
+            background: url(musicimage/lastBg.png);
+            margin: 39px 0 0 118px;
+            cursor: pointer;
+        }
+
+        .playNode {
+            width: 95px;
+            height: 94px;
+            position: absolute;
+            background: url(musicimage/playNode.png);
+            margin: 29px 0 0 202px;
+            cursor: pointer;
+        }
+
+        .pauseNode {
+            background: url(musicimage/p);
+        }
+
+        .nextNode {
+            width: 75px;
+            height: 74px;
+            position: absolute;
+            background: url(musicimage/rightbg.png);
+            margin: 39px 0 0 306px;
+            cursor: pointer;
+        }
+
+        .volumeNode {
+            width: 37px;
+            height: 32px;
+            position: absolute;
+            background: url(musicimage/volume.png);
+            right: 43px;
+            top: 58px;
+            cursor: pointer;
+        }
+
+        .volumeNode-no {
+            width: 37px;
+            height: 32px;
+            position: absolute;
+            right: 43px;
+            top: 58px;
+            cursor: pointer;
+            background: url(musicimage/no_volume.png);
+        }
+
+        .trueLine {
+            position: absolute;
+            left: 3px;
+            top: 2px;
+            height: 12px;
+            width: 0;
+            background: url(musicimage/green_bg.png) repeat-x;
+            border-radius: 6px;
+            border-right: 1px solid #787463;
+        }
+        .musicName{
+            color: #fff;
+            position: absolute;
+            bottom: 2px;
+            left: 5px;
+        }
+    </style>
+</head>
+<body>
+<!--最外层元素-->
+<div class="outerNode">
+    <!--        内层元素-->
+    <div class="innerNode">
+        <!--            封面图-->
+        <div class="topNode">
+            <div class="musicName">
+
+            </div>
+        </div>
+        <!--            进度条-->
+        <div class="lineNode">
+            <div class="progressNode">
+                <div class="progress-left"></div>
+                <div class="progress-right"></div>
+                <!--                    进度条-->
+                <div class="trueLine"></div>
+            </div>
+        </div>
+        <!--            控件元素-->
+        <div class="bottomNode">
+            <!--                上一曲-->
+            <div class="lastNode"></div>
+            <!--                播放暂定-->
+            <div class="playNode"></div>
+            <!--                下一曲-->
+            <div class="nextNode"></div>
+            <!--                静音或非静音-->
+            <div class="volumeNode"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var myAudio = new Audio();
+    myAudio.src = 'music/mus/AcousticGuitar1.mp3';
+    //谷歌浏览器不许直接play
+    var playBtn = document.querySelector(".playNode");
+    var playflag = true;
+    var volumeflag = true;
+    var volueNode = document.querySelector(".volumeNode");
+    var progressNode = document.querySelector(".progressNode");
+    var outerNode = document.querySelector(".outerNode");
+    var topNode = document.querySelector(".topNode");
+    var trueLine = document.querySelector(".trueLine");
+    var lastNode = document.querySelector(".lastNode");
+    var nextNode = document.querySelector(".nextNode");
+    var musicName = document.querySelector(".musicName");
+    //所有的数据存在数组里面
+    let allMusic = [{
+        'MusicSrc': 'music/mus/AcousticGuitar1.mp3',
+        'MusicPic': 'music/pic/fmt01.jpg',
+        'MusicName': 'AcousticGuitar1'
+    }, {
+        'MusicSrc': 'music/mus/AmazingGrace.mp3',
+        'MusicPic': 'music/pic/fmt02.png',
+        'MusicName': 'AmazingGrace'
+
+    }, {
+        'MusicSrc': 'music/mus/FeelsGood2B.mp3',
+        'MusicPic': 'music/pic/fmt03.jpg',
+        'MusicName': 'FeelsGood2B'
+
+    }, {
+        'MusicSrc': 'music/mus/FunBusyIntro.mp3',
+        'MusicPic': 'music/pic/fmt04.jpg',
+        'MusicName': 'FunBusyIntro'
+
+    }, {
+        'MusicSrc': 'music/mus/GreenDaze.mp3',
+        'MusicPic': 'music/pic/fmt05.jpg',
+        'MusicName': 'GreenDaze'
+
+    }, {
+        'MusicSrc': 'music/mus/Limosine.mp3',
+        'MusicPic': 'music/pic/fmt06.jpg',
+        'MusicName': 'Limosine'
+
+    }];
+    var Index = 0;
+
+    function setRightMusic(index) {
+        myAudio.src = allMusic[index].MusicSrc;
+        topNode.style.backgroundImage = 'url(' + allMusic[index].MusicPic + ')';
+        musicName.innerHTML=allMusic[index].MusicName;
+    }
+
+    function rightIndex(index) {
+        if (index > allMusic.length - 1) {
+            index = 0;
+        }
+        if (index < 0) {
+            index = allMusic.length - 1;
+        }
+        return index;
+    }
+    function changeMusic(index){
+        setRightMusic(index);
+        myAudio.currentTime = 0;
+        trueLine.style.width = '0%';
+        isPlay(playflag)
+    }
+    lastNode.onclick = function () {
+        Index--;
+        Index = rightIndex(Index);
+        changeMusic(Index);
+    }
+    nextNode.onclick = function () {
+        Index++;
+        Index = rightIndex(Index);
+        changeMusic(Index);
+    }
+    setRightMusic(Index);
+
+    function isPlay(flag) {
+        if (!flag) {
+            myAudio.play();
+        } else {
+            myAudio.pause();
+        }
+    }
+
+    function isVolume(flag) {
+        if (flag) {
+            myAudio.play();
+            volueNode.className = "volumeNode";
+        } else {
+            myAudio.pause();
+            volueNode.className = "volumeNode-no";
+        }
+    }
+
+    playBtn.onclick = function () {
+        playflag = !playflag;
+        isPlay(playflag)
+
+    }
+    volueNode.onclick = function () {
+        volumeflag = !volumeflag;
+        isVolume(volumeflag);
+
+    }
+    myAudio.addEventListener("timeupdate", function () {
+        trueLine.style.width = myAudio.currentTime / myAudio.duration * 100 + "%";
+    })
+    //点击
+    progressNode.onclick = function (e) {
+        var ev = e || event;
+        trueLine.style.width = (ev.clientX - (this.offsetLeft + outerNode.offsetLeft)) / this.offsetWidth * 100 + '%';
+        myAudio.currentTime = (ev.clientX - (this.offsetLeft + outerNode.offsetLeft)) / this.offsetWidth * myAudio.duration;
+
+    }
+</script>
+</html>

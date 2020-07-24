@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="plug/flexible.js"></script>
+</head>
+<body>
+<!--第一部分-->
+<div class="first">
+<!--    头部-->
+    <header class="header">
+        <div class="container">
+            <div class="title">imooc</div>
+            <div class="nav">
+                <a href="###" class="link nav-item link-active">前端</a>
+                <a href="###" class="link nav-item">java</a>
+                <a href="###" class="link nav-item">ios</a>
+                <a href="###" class="link nav-item">Android</a>
+                <a href="###" class="link nav-item">php</a>
+            </div>
+            <div class="nav-toggle"></div>
+        </div>
+    </header>
+<!--    phone下拉层-->
+    <ul class="nav-layer hidden">
+        <li class="nav-layer-item"><a href="###" class="link">前端</a></li>
+        <li class="nav-layer-item"><a href="###" class="link">java</a></li>
+        <li class="nav-layer-item"><a href="###" class="link">ios</a></li>
+        <li class="nav-layer-item"><a href="###" class="link">Android</a></li>
+        <li class="nav-layer-item"><a href="###" class="link">php</a></li>
+    </ul>
+<!--    main-->
+    <div class="main">
+        <div class="main-img"><img src="img/1.png" alt=""></div>
+        <div class="main-title"><a href="###" class="link">IMOOC</a></div>
+        <div class="btn"><button class="start">start</button></div>
+    </div>
+</div>
+<!--第二部分-->
+<nav class="menu-nav">
+    <div class="menu-nav-item"><a href="##" class="menu-link menu-link-active">关于慕课网</a></div>
+    <div class="menu-nav-item"><a href="##" class="menu-link">关于课程</a></div>
+    <div class="menu-nav-item"><a href="##" class="menu-link">核心团队</a></div>
+    <div class="menu-nav-item"><a href="##" class="menu-link">新增专题</a></div>
+</nav>
+<!--第三部分-->
+<div class="detail">
+    <h3 class="detail-title">响应式</h3>
+    <div class="detail-des">
+        <p class="">
+            当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文
+            内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用
+            户， 还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。想创
+            一个简单的单页式站点，还是一个专业的公司网站：亦或是一个别具一格的博客?
+            起飞页可以满足您的所有需求。我们是响应式网站的倡导者，所有前端页面代码均
+            采用HH LT 5和CSS 3实现。起飞页提供了海量精美网站模板和成品网站， 几乎覆盖
+            当今各个行业，您只需在模板上进行少量修改，即可完成自己的网站，这一切都是
+            免费的。
+        </p>
+    </div>
+</div>
+<!--第四部分-->
+<div class="welcome">
+    <div class="welcome-title">IMOOC</div>
+    <div class="welcome-detail"><span>welcome to&nbsp;</span><a href="##"> www.imooc.com</a></div>
+</div>
+<!--第五部分-->
+<div class="class">
+    <div class="container">
+        <div class="class-title">
+            主打课程
+        </div>
+        <div class="class-group">
+            <div class="class-item"><img src="img/1.jpg" alt=""></div>
+            <div class="class-item"><img src="img/2.jpg" alt=""></div>
+            <div class="class-item"><img src="img/3.jpg" alt=""></div>
+            <div class="class-item"><img src="img/4.jpg" alt=""></div>
+            <div class="class-item"><img src="img/5.jpg" alt=""></div>
+            <div class="class-item"><img src="img/6.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+<!--第六部分-->
+<footer class="footer">Copyright &copy;2017 imooc.com All Rights Reserved</footer>
+</body>
+<script src="plug/jQuery/jQuery%203.5.1.js"></script>
+<script>
+    $('.nav-toggle').on('click',function () {
+        $('.nav-layer').toggleClass('hidden')
+    })
+</script>
+</html>

@@ -1,0 +1,346 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei";
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?mw0ft6');
+    src:  url('../fonts/icomoon.eot?mw0ft6#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?mw0ft6') format('truetype'),
+    url('../fonts/icomoon.woff?mw0ft6') format('woff'),
+    url('../fonts/icomoon.svg?mw0ft6#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+a:hover{
+    cursor: pointer;
+}
+i{
+    font-style: normal;
+}
+li{
+    list-style: none;
+}
+/*头部*/
+.header{
+    width: 100%;
+    min-width: 1200px;
+    height: 123px;
+    border-bottom: 2px solid #2487c9;
+    background-color: #efefef;
+    /*overflow: hidden;*/
+}
+.header-warp{
+    width: 1260px;
+    min-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    height: 123px;
+    line-height: 123px;
+    text-align: center;
+}
+.header__log{
+    margin-left: 5px;
+    float: left;
+    background: url(../img/logo.png) left center no-repeat;
+    padding-left: 130px;
+    font-size: 26px;
+    color: #000;
+    height: 123px;
+    line-height: 123px;
+}
+.header__log:hover{
+    cursor: pointer;
+}
+.header__log span{
+    display: inline-block;
+    height: 123px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 123px;
+}
+.header__serve{
+    color: #666;
+    font-size: 18px;
+    line-height: 123px;
+    display: inline-block;
+    height: 123px;
+    vertical-align: top;
+}
+/*头部导航*/
+.header__menu{
+    float: left;
+    margin-left: 113px;
+}
+.header__menu-wb,.header__menu-login{
+    color: #fa8754;
+}
+.header__menu-item{
+    margin-right: 20px;
+    float: left;
+}
+.header__menu-item:hover{
+    cursor: pointer;
+}
+.header__menu-item a:hover{
+    cursor: pointer;
+    color: #fb7403;
+}
+/*字体图标*/
+.caret{
+    font-family: 'icomoon';
+    display: inline-block;
+    transform: rotate(-30deg);
+    vertical-align: top;
+}
+.header__menu-nav{
+    position: relative;
+}
+.header__menu-nav:hover .header__menu-nav-bd{
+    display: block;
+}
+/*慕课网下拉菜单*/
+.header__menu-nav-bd{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 78px;
+    z-index: 2;
+    border: 1px solid #fb7403;
+    font-size: 12px;
+    text-align: left;
+    padding: 0 5px;
+    background-color: #fcfcfc;
+}
+.header__menu-nav-bd li{
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+    color: #7d7e81;
+    text-indent: 5px;
+}
+.header__menu-nav-bd a:hover{
+    color: #fb7403;
+}
+.header__menu-nav-bd .line{
+    border-bottom: 1px dashed #7d7e81;
+}
+.header__phone{
+    background: url(../img/phone.png) left center no-repeat;
+    background-size: 15px 20px;
+    float: left;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+.header__phone:hover{
+    cursor: pointer;
+}
+.header__phone a:hover{
+    cursor: pointer;
+    color: #fb7403;
+}
+/*页面中间部分*/
+.content{
+    width: 1260px;
+    min-width: 1200px;
+    margin: 0 auto 125px;
+    height: 700px;
+    font-size: 20px;
+}
+.crumbs{
+    height: 40px;
+    text-align: left;
+    line-height: 40px;
+}
+.crumbs a{
+    color: #636363;
+}
+.userLogin{
+    height: 630px;
+    width: 1258px;
+    min-width: 1198px;
+    border: 1px solid #fb7403;
+    border-radius: 10px;
+    color: #000;
+}
+.userLogin_header{
+    height: 40px;
+    text-align: left;
+    text-indent: 15px;
+    color: #fff;
+    line-height: 40px;
+    background-color: #fb7403;
+    border-radius: 9px;
+    margin-bottom: 80px;
+}
+.hidden{
+    visibility: hidden;
+}
+/*表单内容*/
+.userLogin__form-group{
+    width: 800px;
+    margin: 0 auto ;
+    color: #fb7403;
+    font-size: 14px;
+}
+.userLogin__control-label{
+    width: 80px;
+    text-align:justify;
+    text-justify:inter-ideograph;
+    color: #000;
+    display: inline-block;
+    text-align-last: justify;
+    position: relative;
+}
+.userLogin__control-label:after{
+    content: ":";
+    color: #000;
+    display: block;
+    position: absolute;
+    left: 85px;
+    top: 0;
+}
+.login-input-item{
+    width: 206px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #abadb3;
+    color: #abadb3;
+    margin-left: 15px;
+    text-indent: 5px;
+    margin-bottom: 15px;
+}
+.login-input-item option{
+    line-height: 20px;
+    height: 20px;
+}
+.userLogin__prompt{
+    display: inline-block;
+    text-align: left;
+    text-indent: 10px;
+}
+/*密码错误提示*/
+.pw-error{
+    display: none;
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 15px;
+    padding-left: 112px;
+    color: red;
+    padding-bottom: 5px;
+    /*visibility: hidden;*/
+}
+/*提示颜色*/
+.safe-rank span{
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    margin-right: 3px;
+    background-color: #ccc;
+    margin-bottom: 3px;
+}
+.rank-a .s1:nth-child(1){
+    background-color: red;
+}
+.rank-b>.s1:nth-child(1){
+    background-color: red;
+}
+.rank-b>.s1:nth-child(2){
+    background-color: orange;
+}
+.rank-c>.s1:nth-child(1){
+    background-color: red;
+}
+.rank-c>.s1:nth-child(2){
+    background-color: orange;
+}
+.rank-c>.s1:nth-child(3){
+    background-color: green;
+}
+/*姓名提示框*/
+.userLogin__prompt-rules{
+    text-decoration: underline;
+    position: relative;
+}
+.userLogin__prompt-rules:hover{
+    cursor: pointer;
+}
+.userLogin__prompt-rules-content:hover{
+    display: block;
+}
+.userLogin__prompt-rules:hover .userLogin__prompt-rules-content{
+    display: block;
+}
+.userLogin__prompt-rules-content{
+    display: none;
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    border: 1px solid #009ed6;
+    word-break:break-all;
+    word-wrap : break-word ;
+    line-height: 40px;
+    text-indent: 0;
+    padding: 10px 20px;
+    z-index: 2;
+    background-color: #fff;
+    color: #6c6c6c;
+}
+/*条款*/
+.userLogin__label{
+    width: 90px;
+    display: inline-block;
+    height: 20px;
+}
+.checkAgree-color{
+    color: #000000;
+}
+.orange{
+    color: #fb7403;
+}
+/*提交*/
+.login-submit{
+    display: block;
+    height: 35px;
+    width: 230px;
+    background-color: #fb7403;
+    border-radius: 10px;
+    line-height: 35px;
+    color: #fff;
+    margin-top: 60px;
+    margin-left: 380px;
+    border: none;
+}
+.login-submit:hover{
+    cursor: pointer;
+    background-color: rgba(251,116,3,.8);
+}
+/*底部*/
+.footer{
+    width: 100%;
+    height: 100px;
+    border-top: 2px solid rgba(36,135,201);
+    text-align: center;
+    background-color: #dcdcdc;
+    font-size: 16px;
+    color: #999;
+    line-height: 16px;
+}
+.footer-head{
+    margin-top: 25px;
+}
+.footer-head:hover{
+    color: #fb7403;
+    cursor: pointer;
+}
+.footer-subhead{
+    margin-top: 20px;
+}

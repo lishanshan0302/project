@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+
+a{
+    color: #687981;
+    font-size: 12px;
+    -webkit-tap-highlight-color:  transparent;
+}
+a:active {
+    outline: 0;
+}
+.link{
+    color: #757575;
+}
+
+[data-dpr='2'] body,
+[data-dpr='2'] a,
+[data-dpr='2'] input{
+    font-size: 24px;
+}
+[data-dpr='3'] body,
+[data-dpr='3'] a,
+[data-dpr='3'] input{
+    font-size: 36px;
+}
+[data-dpr='2'] .title{
+    font-size: 36px;
+}
+[data-dpr='3'] .title{
+    font-size: 54px;
+}
+[data-dpr='2'] .start{
+    font-size: 20px;
+}
+[data-dpr='3'] .start{
+    font-size: 30px;
+}
+[data-dpr='2'] .detail-title{
+    font-size: 36px;
+}
+[data-dpr='3'] .detail-title{
+    font-size: 48px;
+}
+[data-dpr='2'] .detail-des{
+    font-size: 12px;
+}
+[data-dpr='3'] .detail-des{
+    font-size: 12px;
+}

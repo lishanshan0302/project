@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei;
+}
+a{
+    text-decoration: none;
+    margin: 0;
+}
+a:hover,a:link{
+    color: #666;
+}
+.main{
+    width: 1200px;
+    height: 500px;
+    margin: auto;
+    overflow: hidden;
+}
+/*导航*/
+.main .nav{
+    height: 40px;
+    text-align: center;
+}
+.main .nav .active{
+    background-color: #fc0;
+    border-radius: 5px;
+}
+.main .nav a{
+    display: inline-block;
+    width: 25%;
+    font-size: 22px;
+    line-height: 40px;
+    float: left;
+}
+/*图片*/
+.main .banner a{
+    display: block;
+}
+/*设置图片隐藏*/
+.main .banner .banner-img{
+    display: none;
+    height: 460px;
+    width: 1200px;
+}
+.main .banner .active{
+    display: block;
+}

@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    height: 625px;
+    position: relative;
+    overflow: hidden;
+}
+/*蓝天部分*/
+.skyblue{
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to bottom,rgb(196, 228, 253) 0%, rgb(255, 255, 255) 100%);
+}
+/*白云部分*/
+.skyblue .cloud{
+    width: 197px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: -200px;
+}
+.skyblue .cloud::before{
+    content: "";
+    position: absolute;
+    width: 114px;
+    height: 114px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: -49px;
+    left: 66px;
+}
+.skyblue .cloud::after{
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 98px;
+    border-radius: 35px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    top: -23px;
+    left: 26px;
+}
+.skyblue .cloud:nth-child(1){
+    animation: move 6s infinite linear;
+    z-index: 5;
+}
+.skyblue .cloud:nth-child(2){
+    animation: move 5.5s 1s infinite linear;
+    transform: scale(0.8);
+    opacity: 0.8;
+    z-index: 4;
+    top: 130px
+}
+.skyblue .cloud:nth-child(3){
+    animation: move 5s 1.8s infinite linear;
+    transform: scale(0.7);
+    opacity: 0.7;
+    z-index: 3;
+    top: 90px
+}
+.skyblue .cloud:nth-child(4){
+    animation: move 5.1s 2.5s infinite linear;
+    transform: scale(0.6);
+    opacity: 0.6;
+    z-index: 2;
+    top: 110px
+}
+.skyblue .cloud:nth-child(5){
+    animation: move 5s .5s infinite linear;
+    transform: scale(0.5);
+    opacity: 0.5;
+    z-index: 1;
+    top: 50px
+}
+/*白云动画函数*/
+@keyframes move {
+    0%{left:1300px;}
+    100%{left: -300px;}
+}
+/*草地部分*/
+.grass{
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(148, 190, 89) 100%);
+}
+.grass img{
+    width: 250px;
+    height: 250px;
+    display: block;
+    position: absolute;
+    bottom: 50px;
+    right: 200px;
+}

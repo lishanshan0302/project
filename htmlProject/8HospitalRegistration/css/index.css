@@ -1,0 +1,405 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    font-family: "黑体";
+    /*font-family: "微软雅黑";*/
+}
+input{
+    outline: none;
+    border: none;
+}
+input::-webkit-input-placeholder{
+    color: #a9a9a9;
+}
+button{
+    border: none;
+    outline: none;
+}
+.clearfix::after{
+    content: " ";
+    display: block;
+    height: 0;
+    line-height: 0;
+    clear: both;
+    zoom: 1;
+}
+.wrap{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+.hidden{
+    display: none;
+}
+/*header部分*/
+.header{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #868686;
+    background-color: #f5f5f5;
+}
+.header_phone{
+    background: url(../img/icon-call.png) left no-repeat ;
+    float: left;
+    padding-left: 22px;
+}
+.header_welcome{
+    float: right;
+}
+.header_welcome a{
+    color: #2da5e1;
+}
+.header_welcome a:nth-child(1){
+    margin-right: 15px;
+    margin-left: 30px;
+}
+.header_welcome a:nth-child(2) {
+    margin-right: 75px;
+}
+/*search区域*/
+.search{
+    height: 90px;
+    background-color: #fff;
+}
+.search_log{
+    display: inline-block;
+    float: left;
+    width: 400px;
+    height: 90px;
+    background: url(../img/logo.png) center center no-repeat;
+    background-size:100% 90%;
+}
+.search_log:hover{
+    cursor: pointer;
+}
+.search_input{
+    position: relative;
+    float: right;
+    width: 325px;
+    height: 38px;
+    background: url(../img/ui-search.jpg) no-repeat;
+    background-size: cover;
+    margin-top: 30px;
+}
+
+.search_input-selected{
+    display: inline-block;
+    line-height: 38px;
+    text-indent: 13px;
+    width: 70px;
+    color: #fff;
+}
+.search_input-list{
+    display: none;
+    position: absolute;
+    width: 66px;
+    left: 2px;
+    top: 38px;
+    z-index: 2;
+    font-size: 14px;
+    line-height: 24px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,.2);
+}
+.search_input-list a{
+    color: #a5a2a2;
+    display: block;
+    text-align: center;
+}
+.search_input-list a:hover{
+    background-color: #ebeef5;
+}
+.search__input-text{
+    margin-top: 13px;
+}
+.search_input>a{
+    display: block;
+    height: 38px;
+    width: 43px;
+    float: right;
+}
+/*nav模块*/
+.nav{
+    background-color: #60bff2;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+}
+.nav-item{
+    float: left;
+    width: 110px;
+    color: #fff;
+    text-align: center;
+}
+.nav-item:first-child{
+    margin-left: 10px;
+}
+.nav-item:hover{
+    background-color: #87CEEB;
+}
+.nav .right{
+    margin-right: 0;
+    float:right;
+    text-align: right;
+}
+/*hospital-address模块*/
+.hospital__address{
+    background-color: #f7f7f7;
+    margin-top: 30px;
+    padding: 0 25px;
+    width: 950px;
+}
+.hospital__address-caption{
+    height: 53px;
+    line-height: 53px;
+    border-bottom: 1px solid #dcdddd;
+    font-size: 13px;
+    color: #000;
+    text-align: center;
+}
+.hospital__address-caption a{
+    color: #f29600;
+    font-size: 12px;
+    margin-left: 13px;
+}
+.hospital__address-caption span{
+    color: #0000ff;
+    margin-left: 10px;
+}
+.hospital__address-caption-lf{
+    font-size: 18px;
+    float: left;
+}
+.hospital__address-caption-rt{
+    float: right;
+}
+.hospital__address-detail{
+    margin-top: 10px;
+}
+.hospital__address-detail >div{
+    float: left;
+}
+.hospital__address-detail >div:nth-child(3){
+    float: right;
+    background: url(../img/map-1.png) no-repeat center center;
+    width: 250px;
+    height: 165px;
+    margin-bottom: 30px;
+}
+.hospital__address-detail-imgL{
+    width: 200px;
+    height: 150px;
+    background: url(../img/hospital-1.jpg) no-repeat center center;
+}
+.hospital__address-detail-desc{
+    width: 463px;
+    margin-left: 25px;
+    color: #888;
+    font-size: 12px;
+    line-height: 20px;
+}
+.hospital__address-detail-desc p{
+    margin-top: 10px;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-image: url(../img/address-pt.png);
+    background-position:0 4px;
+}
+/*hospital__detail 科室详情模块*/
+.hospital__detail{
+    margin-top: 40px;
+}
+.hospital__detail__nav{
+    border-bottom: 2px solid #60bff2;
+    margin-bottom: 20px;
+}
+.hospital__detail__nav a{
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    color: #00bff2;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+.hospital__detail__nav .nav-item-focus{
+    color: #fff;
+    background-color: #60bff2;
+}
+.hospital__detail-group{
+
+}
+/*预约*/
+.hospital__detail__group-department{
+    float: left;
+    width: 705px;
+    border: 1px solid #f4f6fa;
+    border-bottom: none;
+    font-size: 16px;
+}
+.hospital__detail__group-department:last-child{
+    border-bottom: 1px solid #f4f6fa;
+}
+.hospital__detail__group-item:last-child{
+    border: none;
+}
+.hospital__detail__group-caption{
+    height: 45px;
+    background-color: #f4f6fa;
+    line-height: 45px;
+    color: #000;
+    font-size: 16px;
+    text-indent: 30px;
+}
+.hospital__detail__group-item{
+    border-bottom: 1px solid #f4f6fa;
+    height: auto;
+    /*overflow: hidden;*/
+}
+
+.hospital__detail__group-item-title{
+    width: 145px;
+    float: left;
+    background-color: #f2fbff;
+    color: #888;
+    text-align: center;
+    line-height: 35px;
+    height: 90px;
+}
+.hospital__detail__group-item-detail{
+    width: 560px;
+    float: right;
+}
+.hospital__detail__group-rule{
+    float: right;
+    width: 270px;
+    height: 280px;
+    border: 1px solid #f4f6fa;
+    overflow:auto;
+}
+.hospital__detail__group-item-detail a{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #4c4948;
+    font-weight: 700;
+    margin-left: 20px;
+}
+/*预约规则*/
+.hospital__detail__group-rule-caption{
+    height: 40px;
+    background-color: #f4f6fa;
+    color: #555;
+    line-height: 40px;
+    text-indent: 10px;
+}
+.hospital__detail__group-rule-caption span{
+    color: #00b3ea;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.hospital__detail__group-rule-item{
+    margin-top: 8px;
+    padding:0 10px;
+    font-size: 12px;
+    
+}
+.hospital__detail__group-rule-item .rule-item-caption{
+    color: #555;
+    width: 68px;
+    font-size: 13px;
+    font-weight: 700;
+}
+.hospital__detail__group-rule-item span {
+    color: #888;
+    width: 160px;
+    display: inline-block;
+    vertical-align: top;
+}
+.hospital__detail__group-rule-item .special{
+    margin-top: 1em;
+}
+.hospital__detail__group p{
+    padding: 10px;
+    color: #3F3F3F;
+    font-size: 14px;
+    line-height: 20px;
+}
+.hospital__detail__group h4{
+    text-align: center;
+    font-size: 24px;
+}
+.hospital__detail__group h6{
+    padding-top: 30px;
+}
+/*停诊信息*/
+.stop__information-caption{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 20px;
+}
+.stop__information-detail{
+    border-collapse:collapse;
+    font-size: 12px;
+    text-align: center;
+}
+.stop__information-detail tr{
+    line-height: 30px;
+}
+.stop__information-detail td{
+    border: 1px solid #dcdddd;
+    min-width: 50px;
+    padding: 0 20px;
+}
+/*查询*/
+.hospital__detail-search{
+    margin-top: 80px;
+    height: 200px;
+    border-top: 1px solid #dcdddd;
+    border-bottom: 1px solid #dcdddd;
+    text-align: center;
+    line-height: 200px;
+    font-size: 16px;
+}
+.hospital__detail-search button{
+    width: 105px;
+    height: 30px;
+    background-color: #00b3ec;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    /*margin-left: 5px;*/
+}
+.hospital__detail-search button:hover{
+    cursor: pointer;
+}
+.hospital__detail-search input{
+    display: inline-block;
+    border: 1px solid #dcdcdc;
+    width: 195px;
+    height: 28px;
+    /*margin-left: 10px;*/
+}
+/*底部*/
+.footer{
+    margin-top: 80px;
+    height: 70px;
+    background-color: #eceef2;
+    color: #acacac;
+    text-align: center;
+    line-height: 80px;
+    font-size: 12px;
+    width: 100%;
+}

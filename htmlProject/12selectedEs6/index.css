@@ -1,0 +1,47 @@
+/*公共样式*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    background-color: #f1eff1;
+}
+input,button{
+    border: none;
+    outline: none;
+}
+li{
+    list-style: none;
+}
+.none{
+    -webkit-transform-origin:0 0;
+    transform: rotateX(90deg);
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title{
+    color: #4b97fb;
+    font-size: 20px;
+    margin-bottom: 17px;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 300px;
+}
+.select-event{
+    margin-bottom: 50px;
+    margin-top: 30px;
+    color: #050008;
+    font-size: 14px;
+}

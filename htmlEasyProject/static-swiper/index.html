@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+</head>
+<body>
+    <div class="main" id="main">
+        <!--顶部导航-->
+        <div class="nav" id="nav">
+            <a href="#" class="active">首页</a>
+            <a href="#">点击看看</a>
+            <a href="#">会自动的</a>
+            <a href="#">我的网站</a>
+        </div>
+        <!--图片-->
+        <div class="banner" id="banner">
+            <a href="#"><div class="banner-img active"></div></a>
+            <a href="#"><div class="banner-img"></div></a>
+            <a href="#"><div class="banner-img"></div></a>
+            <a href="#"><div class="banner-img"></div></a>
+        </div>
+    </div>
+</body>
+<!--老师有个问题：
+    1.为什么我设置图片的时候采用
+    div.banner-img:nth-child(1)  选择器设置图片背景的时候无法生效
+    2.不给banner部分的div.banner-img设置宽高，直接引用图片背景是不是无法直接生效？所以div.banner-img宽高是必须设置的？
+    不设置会导致a高度为0而且假如直接给a设置的话  div也是无法直接引入图片背景，所以要设置宽高？-->
+</html>

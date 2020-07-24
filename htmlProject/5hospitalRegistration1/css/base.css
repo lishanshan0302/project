@@ -1,0 +1,308 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+input, select{
+    border: none;
+    outline: none;
+}
+/*top模块部分*/
+.top{
+    line-height: 30px;
+    font-size: 14px;
+}
+.top p{
+    display: inline-block;
+    color: #868686;
+}
+.top .call{
+    float: left;
+    background: url(../img/icon-call.png) no-repeat left center;
+    padding-left: 20px;
+}
+.top .welcome{
+    float: right;
+}
+.top .welcome a{
+    color: #5bb8e8;
+}
+/*header模块*/
+.header-log{
+    height: 74px;
+    width: 403px;
+}
+.header-log img{
+    width: 100%;
+    height: 100%;
+}
+.header-search{
+    width: 326px;
+    height: 38px;
+    /*position: absolute;*/
+    /*right: 0;*/
+    /*top: 50%;*/
+    margin-top: 19px;
+    /*background-color: orange;*/
+}
+/*nav-menu模块*/
+.nav-menu .link{
+    display: inline-block;
+    margin-right: 30px;
+    color: #fff;
+    line-height: 36px;
+    text-align: center;
+    float: left;
+    min-width: 80px;
+}
+.nav-menu .menu{
+    width: 160px;
+    height: 36px;
+    background-color: #1fa4f0;
+    position: relative;
+   padding-right: 30px;
+}
+.nav-menu .menu-list{
+    width: 100%;
+    height: 422px;
+    background-color: #1fa4f0;
+    position: absolute;
+    top: 36px;
+    left: 0;
+}
+.nav-menu .right{
+    float: right;
+}
+.nav-menu a:hover{
+    color: #d7f3ff;
+}
+/*banner模块*/
+.banner-search{
+    background-color: #fafafa;
+}
+.banner-search .caption{
+    text-align: center;
+    color: #fecd09;
+}
+.banner-search .caption .text{
+    display: inline-block;
+    background: url(../img/icon-help.png) left top no-repeat;
+    padding-left: 24px;
+    margin: 15px 0 13px;
+    height: 22px;
+    line-height: 22px;
+}
+.banner-search .line{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.banner-search .line select{
+    height: 20px;
+    text-indent: 5px;
+    border-radius: 3px;
+    width: 170px;
+    font-size: 12px;
+    color: #868686;
+}
+.banner-search .submit{
+   text-align: center;
+}
+.banner-search .button{
+    background-color:#fecd09;
+    width: 108px;
+    height: 32px;
+    margin-top: 16px;
+    color: #fff;
+    line-height: 32px;
+    border-radius: 3px;
+}
+/*help*/
+.banner-help{
+    background-color: #fafafa;
+}
+.banner-help .caption{
+    text-align: center;
+    color: #00b3ea;
+}
+.banner-help .caption .text{
+    display: inline-block;
+    background: url(../img/icon-help.png) 0 -23px no-repeat;
+    padding-left: 24px;
+    margin: 15px 0 13px;
+    height: 22px;
+    line-height: 22px;
+}
+.banner-help .link{
+    display: block;
+    width: 86px;
+    height: 26px;
+    line-height: 26px;
+    color: #00b3ea;
+    margin-left: 26px;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.banner-help .link:hover{
+    background-color: #fc97fc;
+}
+/*content-new模块*/
+.content-close,
+.content-new{
+    background-color: #fff;
+    border: 1px solid #f4f6fa;
+}
+.content-close .caption,
+.content-new .caption{
+    height: 38px;
+    background-color: #f4f6f4;
+    line-height: 38px;
+    font-size: 16px;
+    color: #fec009;
+    text-indent: 20px;
+}
+.content .more,
+.content-new .more{
+    float: right;
+    margin-right: 20px;
+    color: #8c8c8c;
+    font-size: 12px;
+}
+.content-close .list,
+.content-new .list{
+    padding: 13px 20px 13px 35px;
+    line-height: 29px;
+    font-size: 12px;
+    background: url(../img/list-yellow.jpg) no-repeat 17px 20px;
+}
+.content-close .link,
+.content-new .link{
+    display: block;
+    color: #969696;
+    
+}
+.content-close .caption{
+    color: #4ab4ef;
+}
+.content-close .list{
+    background: url(../img/list-blue.jpg) no-repeat 17px 20px;
+}
+/*.content-tab模块*/
+.content-tab{
+    background: none;
+}
+.content-tab .caption{
+    height: 34px;
+    background-color: #f4f6fa;
+    line-height: 34px;
+}
+.content-tab .caption .item{
+    display: block;
+    width: 112px;
+    text-align: center;
+    float: left;
+    color: #00b3ea;
+}
+.content-tab .caption .item_focus{
+    background-color: #00b3ea;
+    color: #fff;
+}
+.content-tab .block{
+    border: 1px solid #f4f6fa;
+    height: 452px;
+}
+.content-tab  .block-caption{
+    height: 26px;
+    line-height: 26px;
+    padding: 8px;
+    border-bottom: 1px solid #f4f6fa;
+}
+.content-tab .block-caption-item{
+    display: block;
+    float: left;
+    padding: 0 10px;
+    color: #514e4d;
+}
+.content-tab .block-caption-item_focus{
+    background-color: #60bff2;
+    color: #fff;
+}
+.content-tab .block-content{
+    padding: 16px 12px;
+}
+.content-tab .block-content .block-more{
+    display: block;
+    height: 55px;
+    line-height: 55px;
+    color: #5084c7;
+    text-align: center;
+    font-size: 14px;
+}
+/*医院列表容器*/
+.content-tab .block-content .block-list-item{
+    float: left;
+    width: 216px;
+    height: 102px;
+    padding: 0 20px 10px 120px;
+    position: relative;
+    font-size: 12px;
+}
+.content-tab .block-content .block-list-item img{
+    width: 110px;
+    height: 98px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.content-tab .block-content .block-list-item_name{
+    height: 21px;
+    line-height: 21px;
+    margin: 8px 0 10px;
+    color: #8dbede;
+    font-size: 14px;
+}
+.content-tab .block-content .block-list-item_level{
+    color: #979797;
+    font-size: 12px;
+    float: right;
+}
+.content-tab .block-content  .block-list-item_phone,
+.content-tab .block-content  .block-list-item_address{
+    font-size: 12px;
+    color: #666;
+    line-height: 18px;
+    padding-bottom: 4px;
+}
+/*医院文案容器*/
+.content-tab .block-content .block-text-list{
+
+}
+.content-tab .block-content .block-text-list-item{
+    display: block;
+    font-size: 14px;
+    color: #666;
+    height: 26px;
+    padding-top: 8px;
+    width: 351px;
+    border-bottom: 1px dashed #dcdddd;
+    float: left;
+}
+.content-tab .block-content .block-text-list-item:nth-child(2n+1){
+    margin-right: 10px;
+}
+.content-tab .block-content .block-text-list-item_level{
+    float: right;
+    color: #979797;
+}
+/*底部*/
+.footer{
+    background-color: #eceef2;
+    height: 70px;
+    line-height: 70px;
+    font-size: 12px;
+    text-align: center;
+    color: #bdbdbe;
+}

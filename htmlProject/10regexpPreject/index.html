@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册信息</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<!--1.总觉得header__log  部分文字不是垂直居中
+    2.如何解决文字跟标点符号一起两端对齐的时候文字与标点之间的空白？
+-->
+<!--    头部开始-->
+<div class="header">
+    <div class="header-warp">
+        <div class="header__log">慕课高铁客户服务中心
+        <span>|</span>
+            <a class="header__serve">客户服务</a>
+        </div>
+<!--        头部导航-->
+        <ul class="header__menu">
+            <li class="header__menu-item">意见反馈&nbsp;&nbsp;<a href="javascript:;" class="header__menu-wb">imocc@com</a></li>
+            <li class="header__menu-item">您好，请
+                <a href="javascript:;" class="header__menu-login">登录</a>
+                <span>&nbsp;|&nbsp;</span>
+                <a href="javascript:;">注册</a>
+            </li>
+            <li class="header__menu-item header__menu-nav">
+                <a href="javascript:;">我的IMOCC
+                    <i class="caret"></i>
+                </a>
+                <ul class="header__menu-nav-bd">
+                    <li><a href="javascript:;">未完成订单</a></li>
+                    <li><a href="javascript:;">已完成订单(改/退)</a></li>
+                    <li class="line"><a href="javascript:;">已完成订单(改/退)</a></li>
+                    <li class="line"><a href="javascript:;">我的保险</a></li>
+                    <li><a href="javascript:;">查看个人信息</a></li>
+                    <li class="line"><a href="javascript:;">账户安全</a></li>
+                    <li class="line"><a href="javascript:;">常用联系人</a></li>
+                    <li><a href="javascript:;">重点旅客预约</a></li>
+                    <li class="line"><a href="javascript:;">遗失物品查找</a></li>
+                    <li class="line"><a href="javascript:;">服务查询</a></li>
+                    <li><a href="javascript:;">投诉</a></li>
+                    <li><a href="javascript:;">建议</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="header__phone"><a href="javascript:;">手机版</a></div>
+    </div>
+</div>
+<!--    页面中间部分开始-->
+<div class="content">
+<!--    导航-->
+    <div class="crumbs">
+        您现在的位置：
+        <a href="javascript:;">客运首页</a>
+        &nbsp;>&nbsp;
+        <a href="javascript:;">注册</a>
+    </div>
+<!--    表单-->
+    <form action="#" class="userLogin">
+        <div class="userLogin_header">账户信息</div>
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="username" class="userLogin__control-label">用户名</label>
+            <input type="text" id="username" placeholder="用户名设置成功后不可修改" class="login-input-item">
+            <span class="userLogin__prompt">用户名是6-20位字母、数字或“_”,字母开头</span>
+        </div>
+<!--        登录密码-->
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="password" class="userLogin__control-label">登录密码</label>
+            <input type="password" id="password" placeholder="6-20位字母数字或符号" class="login-input-item">
+            <div id="div-pw-rank" class="safe-rank rank-a userLogin__prompt">
+                <!-- 危险rank-a，一般rank-b，安全rank-c -->
+                <span  class="s1"></span>
+                <span  class="s1"></span>
+                <span  class="s1"></span>
+            </div>
+            <label for="password" class="pw-error">6-20位字母、数字或符号</label>
+        </div>
+<!--        确认密码-->
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="password_" class="userLogin__control-label">确认密码</label>
+            <input type="password" id="password_" placeholder="再次确认您的登录密码" class="login-input-item">
+            <span class="userLogin__prompt"></span>
+        </div>
+<!--        姓名-->
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="userXm" class="userLogin__control-label">姓名</label>
+            <input type="text" id="userXm" placeholder="请输入姓名" class="login-input-item">
+            <span class="userLogin__prompt userLogin__prompt-rules">姓名填写规则
+                <div class="userLogin__prompt-rules-content">1.确认姓名中生僻字无法输入时，可用生僻字拼音或同音字替代。<br/>
+2.输入姓名保存后，遇有系统无法正确显示的汉字，可用该汉字的拼音或同音字重新修改后保存。<br/>
+3.姓名中有繁体字无法输入时，可用简体替代。<br/>
+4.姓名较长，汉字与英文字符合计超过30个（1个汉字算2个字符）的，需按姓名中第一个汉字或英文字符开始按顺序连续输入30个字符（空格字符不输入），其中英文字符输入时不区别大小写
+                </div>
+            </span>
+        </div>
+<!--        身份证类型-->
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="cardType" class="userLogin__control-label">身份证类型</label>
+            <select id="cardType"  class="login-input-item">
+                <option value="1">二代身份证</option>
+                <option value="2">港澳通行证</option>
+                <option value="3">台湾通行证</option>
+                <option value="3">护照</option>
+            </select>
+            <span class="userLogin__prompt"></span>
+        </div>
+<!--        证件号码-->
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="informationNumber" class="userLogin__control-label">证件号码</label>
+            <input type="text" id="informationNumber" placeholder="请输入您的证件号码" class="login-input-item">
+            <span class="userLogin__prompt"></span>
+        </div>
+<!--        邮箱-->
+        <div class="userLogin__form-group"><i class="hidden">*</i>
+            <label for="email" class="userLogin__control-label">邮箱</label>
+            <input type="text" id="email" placeholder="请正确填写邮箱地址" class="login-input-item">
+            <span class="userLogin__prompt"></span>
+        </div>
+<!--        手机号码-->
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="telNumber" class="userLogin__control-label">手机号码</label>
+            <input type="text" id="telNumber" placeholder="请输入您的手机号码" class="login-input-item">
+            <span class="userLogin__prompt">请正确填写手机号码，稍后将向该手机号码发送短信验证码</span>
+        </div>
+<!--        旅客类型-->
+        <div class="userLogin__form-group"><i>*</i>
+            <label for="passengerType" class="userLogin__control-label">旅客类型</label>
+            <select id="passengerType"  class="login-input-item">
+                <option value="1"  selected = "selected" >成人</option>
+                <option value="2">儿童</option>
+                <option value="3">学生</option>
+                <option value="4">残疾军人</option>
+                <option value="5">伤残人民警察</option>
+            </select>
+            <span class="userLogin__prompt"></span>
+        </div>
+<!--        确认条款-->
+        <div class="userLogin__form-group"><i class="hidden">*</i>
+            <div class="userLogin__label"></div>
+                <input type="checkbox" id="checkAgree">
+                <label for="checkAgree" class="checkAgree-color">我已阅读并同意遵守</label>
+                <a href="#" class="orange">《中国铁路客户服务中心网站服务条款》</a>
+        </div>
+        <input type="submit" class="login-submit" value="下一步">
+    </form>
+</div>
+<footer class="footer">
+    <p class="footer-head">
+        <span>关于我们|网站声明</span>
+    </p>
+    <p class="footer-subhead">
+        <span>Copyright &copy;2017 imooc.com All Rights Reserved | 京ICP备 13046642号-2</span>
+    </p>
+</footer>
+</body>
+<script src="js/index.js"></script>
+</html>

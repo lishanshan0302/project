@@ -1,0 +1,293 @@
+/*公共样式*/
+
+body{
+    font-size: 12px;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.link{
+    color: #4d555d;
+    font-size: 12px;
+}
+.text-hidden{
+    overflow:hidden;
+    text-indent: -990px;
+}
+.text-ellipsis{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.link:hover{
+    color: #f01414;
+}
+.transition {
+    transition: all .2s;
+}
+input{
+    border: none;
+    outline: none;
+}
+/*icon*/
+
+@font-face {
+    font-family: "iconfont";
+    src: url('../font/iconfont.eot?t=1477124206');
+    /* IE9*/
+    src: url('../font/iconfont.eot?t=1477124206#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff?t=1477124206') format('woff'), /* chrome, firefox */ url('../font/iconfont.ttf?t=1477124206') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg?t=1477124206#iconfont') format('svg');
+    /* iOS 4.1- */
+}
+
+.icon {
+    font-family: "iconfont" !important;
+    font-size: 10px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+/*dropdown*/
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    position: relative;
+    z-index: 2;
+}
+
+.dropdown-arrow {
+    display: inline-block;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.dropdown-layer {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+.dropdown-lf{
+    left: 0;
+    right: auto;
+}
+.dropdown-rt{
+    right: 0;
+    left: auto;
+}
+.dropdown-loading{
+    width: 32px;
+    height: 32px;
+    margin: 30% auto 0;
+    background:url(../img/loading.gif) no-repeat;
+}
+/*showHide*/
+
+.fadeOut {
+    visibility: hidden !important; /*占位，但隐藏时不会触发绑定事件*/
+    opacity: 0 !important;
+}
+
+.slidUpDownCollapse {
+    height: 0 !important; /*如果不设置，会因为优先级的问题导致高度不起作用*/
+    padding-top: 0 !important; /*如果不设置，会因为优先级的问题导致高度不起作用*/
+    padding-bottom: 0 !important; /*如果不设置，会因为优先级的问题导致高度不起作用*/
+}
+
+.slideLeftRightCollapse {
+    width: 0 !important; /*如果不设置，会因为优先级的问题导致高度不起作用*/
+    padding-left: 0 !important; /*如果不设置，会因为优先级的问题导致高度不起作用*/
+    padding-right: 0 !important; /*如果不设置，会因为优先级的问题导致高度不起作用*/
+}
+/*menu dropdown*/
+
+
+.menu .dropdown-toggle{
+    display: block;
+    height: 43px;
+    line-height: 44px;
+    padding: 0 17px 0 10px;
+    border-left: 1px solid #f3f5f7;
+    border-right: 1px solid #f3f5f7;
+    
+}
+.menu .dropdown-toggle:hover{
+    background-color: #fff;
+    border-left: 1px solid #cdd0d4;
+    border-right: 1px solid #cdd0d4;
+}
+
+.menu-category{
+    padding: 0 13px 0 10px;
+}
+.menu .dropdown-layer{
+    top:43px;
+    background-color: #fff;
+    border: 1px solid #cdd0d4;
+    min-width: 95px;
+    border-top: none;
+    overflow: hidden;
+}
+.menu-item {
+    display: block;
+    color: #4d555d;
+    padding: 0 12px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    white-space:nowrap;
+}
+.menu-item:hover {
+    background-color: #f3f5f7;
+}
+.menu-active .dropdown-arrow{ /*属性包含-active元素*/
+    transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+.menu-active .dropdown-toggle {
+    border-color: #cdd0d4;
+    background-color: #fff;
+}
+
+/*category*/
+
+.category-list{
+    position: relative;
+    border-left: 1px solid #f3f5f7;
+    border-right: 1px solid #f3f5f7;
+}
+.category-list  .dropdown{
+    position: static;
+}
+.category-list .dropdown-toggle{
+    width: 100%;
+    color: #fff;
+    text-indent: 15px;
+    height: 36px;
+    line-height: 36px;
+    cursor: pointer;
+}
+.category-list .dropdown-link{
+    color: #fff;
+}
+.category-list .dropdown-arrow{
+    margin-right: 12px;
+    font-family: simsun;
+}
+.category-list .dropdown-layer{
+    min-height: 513px;
+    width: 744px;
+    left: 205px;
+    top: -2px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+    overflow: hidden;
+}
+.category-active .dropdown-toggle{
+    background-color: #fff;
+}
+.category-active .dropdown-toggle,
+.category-active .dropdown-link {
+    color: #f01414;
+}
+.category-detail{
+    width: 744px;
+    margin-top: 24px;
+    line-height: 20px;
+}
+.category-detail-title{
+    width: 84px;
+    text-align: right;
+    padding-right: 16px;
+    border-right: 1px solid #d9dde1;
+}
+.category-detail-title-link{
+    font-weight: bold;
+    color: #07111b;
+}
+.category-detail-item{
+    padding-left: 15px;
+    width: 592px;
+    
+}
+.category-detail-item .link{
+    display: inline-block;
+    padding-right: 16px;
+}
+
+/*slider*/
+.slider{
+    height: 504px;
+    width: 728px;
+    position: relative;
+}
+.slider-container{
+
+}
+.slider-item{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slider-indicator-wrap{
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.slider-indicator{
+    height: 8px;
+    width: 8px;
+    background-color: #313a43;
+    border: 2px solid #e5e9eb;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.slider-indicator-active{
+    background-color: #f7f8f9;
+    border-color: #858b92;
+}
+.slider-control{
+    height: 60px;
+    width: 30px;
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    top: 50%;
+    color: #fff;
+    line-height: 60px;
+    text-align: center;
+    transform: translateY(-50%);
+    font-family: simsun;
+    font-size: 20px;
+}
+.slider-control-lf{
+    left: 0;
+    right: auto;
+}
+.slider-control-rt{
+    right: 0;
+    left: auto;
+}
+.slider-fade .slider-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slider-slide .slider-item {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+}

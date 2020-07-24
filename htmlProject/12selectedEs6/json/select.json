@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "name": "Babel",
+      "type": "构建工具"
+    },
+    {
+      "id": "2",
+      "name": "Webpack",
+      "type": "构建工具"
+    },
+    {
+      "id": "3",
+      "name": "Rollup",
+      "type": "构建工具"
+    },
+    {
+      "id": "4",
+      "name": "Vue",
+      "type": "前端框架"
+    },
+    {
+      "id": "5",
+      "name": "Angular",
+      "type": "前端框架"
+    },
+    {
+      "id": "6",
+      "name": "React",
+      "type": "前端框架"
+    },
+    {
+      "id": "7",
+      "name": "Nerv",
+      "type": "前端框架"
+    }
+  ],
+  "message":"成功"
+}
